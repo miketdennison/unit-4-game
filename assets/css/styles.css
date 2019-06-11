@@ -1,0 +1,17 @@
+.element-img {
+    height: auto;
+    width: 50%;
+    text-align: center;
+}
+
+.element-div {
+    text-align: center;
+}
+
+.row {
+    text-align: center;
+}
+
+.empty {
+    display: none;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Element's Game</title>
+
+    <link rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row mb-2" id="title">
+            <div class="col-md-12 center-block text-center bg-dark text-white">
+                <h1>Element Collector</h1>
+            </div>
+        </div>
+        <div class="row mb-2" id="instructions">
+            <div class="col-md-12 center-block text-center bg-secondary text-white">
+                <p class="pt-3">You will be given a random number at the start of your game.</p>
+
+                <p>There are four elements below (earth, wind, water, fire). By clicking on an element your
+                    will add a specific amount of points to your total score.</p>
+
+                <p>You win the game by matching your total score to the random number. You lose the game if
+                    your total score goes above the random number.</p>
+
+                <p>The value of each element is hidden from you until you click on it.</p>
+
+                <p>Each time when the game starts, the game will change the values of each crystal.</p>
+            </div>
+        </div>
+        <div class="row mb-2" id="scoreboard">
+            <div class="col-md-6 text-center bg-secondary text-white">
+                Goal: <span id="goal-pts"></span>
+            </div>
+            <div class="col-md-6 text-center bg-secondary text-white">
+                <div class="col-md-4 text-center bg-secondary text-white" id="winner-or-loser">
+                    &nbsp;
+                </div>
+                <div class="col-md-4 text-center bg-secondary text-white">
+                    Wins: <span id="num-of-wins"></span>
+                </div>
+                <div class="col-md-4 text-center bg-secondary text-white">
+                    Losses: <span id="num-of-losses"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-2" id="elements">
+            <div class="col-md-3 element-div">
+                <img src="assets/images/earth.png" alt="earth-img" class="img-fluid element-img" id="earth-img">
+            </div>
+            <div class="col-md-3 element-div">
+                <img src="assets/images/wind.png" alt="wind-img" class="image-fluid element-img" id="wind-img">
+            </div>
+            <div class="col-md-3 element-div">
+                <img src="assets/images/water.png" alt="water-img" class="img-fluid element-img" id="water-img">
+            </div>
+            <div class="col-md-3 element-div">
+                <img src="assets/images/fire.png" alt="fire-img" class="img-fluid element-img" id="fire-img">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center bg-secondary text-white">
+                Score: <span id="total-score"></span>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="assets/javascript/game.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
