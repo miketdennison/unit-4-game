@@ -29,11 +29,6 @@ var fire = {
     idName: "fire-img",
 }
 
-var heart = {
-    points: 0,
-    idName: "heart-img",
-}
-
 function reset() {
     pointsRequired = 0;
     totalPoints = 0;
@@ -45,7 +40,6 @@ function reset() {
     wind.points = Math.floor(Math.random() * (MAX_ELEMENT_POINTS - MIN_ELEMENT_POINTS) + 1) + MIN_ELEMENT_POINTS;
     water.points = Math.floor(Math.random() * (MAX_ELEMENT_POINTS - MIN_ELEMENT_POINTS) + 1) + MIN_ELEMENT_POINTS;
     fire.points = Math.floor(Math.random() * (MAX_ELEMENT_POINTS - MIN_ELEMENT_POINTS) + 1) + MIN_ELEMENT_POINTS;
-    heart.points = Math.floor(Math.random() * (MAX_ELEMENT_POINTS - MIN_ELEMENT_POINTS) + 1) + MIN_ELEMENT_POINTS;
 
     $("#goal-pts").html(`<strong>${pointsRequired}</strong>`);
     $("#total-score").html(`<b>${totalPoints}</b>`)
@@ -61,6 +55,13 @@ $(".element-img").on("click", function () {
     calculatePoints();
 });
 
+function changeBackground(color){
+    $("body").addClass(color)
+    setTimeout(function () {
+        $("body").removeClass(color)
+    }, 500);
+}
+
 function calculatePoints() {
     if (clickedImageId === earth.idName) {
         totalPoints += earth.points;
@@ -70,17 +71,18 @@ function calculatePoints() {
         totalPoints += water.points;
     } else if (clickedImageId === fire.idName) {
         totalPoints += fire.points;
-    } else if (clickedImageId === heart.idName) {
-        totalPoints += heart.points;
     }
     $("#total-score").html(`<b>${totalPoints}</b>`);
     if(totalPoints === pointsRequired) {
         totalWins++;
         $("#winner-or-loser").html("You win!!");
+        changeBackground("background-green");
         reset();
     } else if(totalPoints > pointsRequired) {
         totalLosses++;
         $("#winner-or-loser").html("You lose!!");
+        changeBackground("background-red");
         reset();
     }
 }
+

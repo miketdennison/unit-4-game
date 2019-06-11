@@ -15,3 +15,18 @@
 .empty {
     display: none;
 }
+
+.background-red {
+    background: orangered;
+}
+
+.background-green {
+    background: greenyellow;
+}
+
+.background-white {
+    background: white;
+}
+body {
+    background: white;
+}
