@@ -13,22 +13,20 @@ var earth = {
     points: 0,
     idName: "earth-img",
 }
-
 var wind = {
     points: 0,
     idName: "wind-img",
 }
-
 var water = {
     points: 0,
     idName: "water-img",
 }
-
 var fire = {
     points: 0,
     idName: "fire-img",
 }
 
+// Return values to normal/beginning states
 function reset() {
     pointsRequired = 0;
     totalPoints = 0;
@@ -49,12 +47,14 @@ function reset() {
 
 reset();
 
+//When clicked, flicker the image, and calculate points
 $(".element-img").on("click", function () {
     clickedImageId = $(this).attr("id");
     $("#" + clickedImageId).fadeIn(100).fadeOut(100).fadeIn(100);
     calculatePoints();
 });
 
+// Depending on winner/loser it will flash green/red respectively
 function changeBackground(color){
     $("body").addClass(color)
     setTimeout(function () {
@@ -62,6 +62,7 @@ function changeBackground(color){
     }, 500);
 }
 
+// Calclulate the points and evalute if winner or loser, call change background, and reset
 function calculatePoints() {
     if (clickedImageId === earth.idName) {
         totalPoints += earth.points;
