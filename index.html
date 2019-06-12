@@ -25,7 +25,7 @@
             <div class="col-md-12 center-block text-center bg-dark text-light">
                 <p class="pt-3">You will be given a random number at the start of your game.</p>
 
-                <p>There are four elements below (earth, wind, water, fire). By clicking on an element your
+                <p>There are four elements below (earth, wind, water, fire). By clicking on an element you
                     will add a specific amount of points to your total score.</p>
 
                 <p>You win the game by matching your total score to the random number. You lose the game if
@@ -33,21 +33,30 @@
 
                 <p>The value of each element is hidden from you until you click on it.</p>
 
-                <p>Each time when the game starts, the game will change the values of each crystal.</p>
+                <p>Each time when the game starts, the game will change the values of each element.</p>
             </div>
         </div>
         <div class="row mb-2" id="scoreboard">
-            <div class="col-md-6 text-center bg-secondary text-light">
-                Goal: <span id="goal-pts"></span>
-            </div>
-            <div class="col-md-6 text-center bg-secondary text-light">
-                <div class="col-md-4 text-center" id="winner-or-loser">
+            <div class="col-md-6 text-left bg-secondary text-light">
+                <div class="col-md-4 text-left" id="winner-or-loser">
                     &nbsp;
                 </div>
-                <div class="col-md-4 text-center">
+                <div class="col-md-4 text-left" id="winner-or-loser">
+                    Goal: <span id="goal-pts"></span>
+                </div>
+                <div class="col-md-4 text-left">
+                    Score: <span id="total-score"></span>
+                </div>
+                
+            </div>
+            <div class="col-md-6 text-left bg-secondary text-light">
+                <div class="col-md-4 text-left" id="winner-or-loser">
+                    &nbsp;
+                </div>
+                <div class="col-md-4 text-left">
                     Wins: <span id="num-of-wins"></span>
                 </div>
-                <div class="col-md-4 text-center">
+                <div class="col-md-4 text-left">
                     Losses: <span id="num-of-losses"></span>
                 </div>
             </div>
@@ -68,7 +77,7 @@
         </div>
         <div class="row">
             <div class="col-md-12 text-center bg-dark text-light">
-                Score: <span id="total-score"></span>
+                &nbsp;
             </div>
         </div>
     </div>
